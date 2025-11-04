@@ -1,4 +1,5 @@
 import React from 'react';
+import Spline from '@splinetool/react-spline';
 import { ShieldCheck, CheckCircle2, Award, PhoneCall, FileText } from 'lucide-react';
 
 const trustBadges = [
@@ -15,13 +16,10 @@ export default function Hero({ onOpenQuote }) {
 
   return (
     <section className="relative w-full overflow-hidden bg-neutral-950">
+      {/* Spline animated background */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1546549039-95cd1b61e1dc?q=80&w=2068&auto=format&fit=crop"
-          alt="Premium halal sausages breakfast"
-          className="h-full w-full object-cover opacity-80"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+        <Spline scene="https://prod.spline.design/UngO8SNLfLcyPG7O/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-28 sm:py-36 text-white">
@@ -42,7 +40,7 @@ export default function Hero({ onOpenQuote }) {
           </button>
           <button
             onClick={handleCatalogClick}
-            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition hover:bg:white/20 focus:outline-none focus:ring-2 focus:ring-white/40"
           >
             <FileText size={18} /> View Product Catalog
           </button>
